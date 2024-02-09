@@ -5,6 +5,7 @@ from typing import List
 # Time: O(N)
 # Space: O(1)
 def increasingTriplet(nums: List[int]) -> bool:
+    
     # float("inf") - უმცირესი რიცხვის საპოვნელად გამოიყენება ან მიმდევრობების
     min1 = min2 = float("inf")
     for n in nums:
