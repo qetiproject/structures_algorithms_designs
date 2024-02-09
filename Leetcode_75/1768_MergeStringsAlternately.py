@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/merge-strings-alternately/?envType=study-plan-v2&envId=leetcode-75
 
 # Time: O(max(len1, len2) )
-# Space: O(1)
+# Space: O(1)?
 def mergeAlternately(word1: str, word2: str) -> str:
     len1, len2 = len(word1), len(word2)
     max_len = max(len1, len2)
