@@ -17,7 +17,6 @@ def calPoints(operations: List[str]) -> int:
         else:
             stack.append(int(op))
 
-
     return sum(stack)
 
 print(calPoints(["5","2","C","D","+"]))
