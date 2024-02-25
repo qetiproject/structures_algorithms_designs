@@ -2,7 +2,7 @@
 
 from typing import List
 
-# Time: O(N)
+# Time: O(2*N), რადგან ხან მარჯვნივ ვაჩოჩებთ ხან მარცხნივ = O(N)
 # Space: O(1)
 def minSubArrayLen(self, target: int, nums: List[int]) -> int:
     result = len(nums) + 1
