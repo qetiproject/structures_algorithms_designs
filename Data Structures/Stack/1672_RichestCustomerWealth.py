@@ -2,6 +2,7 @@
 
 from typing import List
 
+# Time:  O(N * M)
 def maximumWealth(accounts: List[List[int]]) -> int:
     result = 0
 
