@@ -6,6 +6,8 @@
 #     s = s.split() # O(N)
 #     return " ".join(s[::-1]) # O(N) - join, reverse
 
+# Time: O(N)
+# Space: O(1)
 class Solution:
     def reverseWords(self,  s: str) -> str:
         result = ""
