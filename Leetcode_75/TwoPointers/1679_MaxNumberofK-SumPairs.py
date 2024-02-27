@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/max-number-of-k-sum-pairs/?envType=study-plan-v2&envId=leetcode-75
+# https://leetcode.com/problems/max-number-of-k-sum-pairs/
 
 from typing import Counter, List
 

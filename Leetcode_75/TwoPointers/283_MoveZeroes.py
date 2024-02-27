@@ -1,5 +1,4 @@
-# https://leetcode.com/problems/move-zeroes/?envType=study-plan-v2&envId=leetcode-75
-
+# https://leetcode.com/problems/move-zeroes/
 from typing import List
 
 # Time: O(N)
