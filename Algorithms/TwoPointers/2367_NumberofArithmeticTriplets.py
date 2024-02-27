@@ -3,26 +3,30 @@
 
 from typing import List
 
+# Time: O(N ^ 2)
+# Space: O(1)
+class Solution:
+    def arithmeticTriplets(self, nums: List[int], diff: int) -> int:
+        result = 0
+        n = len(nums)
 
-def arithmeticTriplets(nums: List[int], diff: int) -> int:
-    n = len(nums)
-    result = 0
+        for i in range(n - 2):  # O(N)
+            j = i + 1  
+            k = j + 1  
+            while k < n:  # O(N)
+                diff1 = nums[j] - nums[i]
+                diff2 = nums[k] - nums[j]
 
-    for i in range(n):
-        left = i + 1
-        right = n - 1
+                if diff1 == diff2 == diff:
+                    result += 1
+                    j += 1  
+                    k += 1  
+                elif diff1 < diff2:
+                    j += 1  
+                else:
+                    k += 1 
 
-        while left < right:
-            curr_diff = nums[left] - nums[i]
+        return result
 
-            if curr_diff == diff:
-                result += 1
-                left += 1
-            elif curr_diff > diff:
-                right -= 1
-            elif curr_diff < diff:
-                left += 1
-
-    return result
-
-print(arithmeticTriplets([0,1,4,6,7,10], 2))
+test = Solution()
+print(test.arithmeticTriplets([4, 5, 6, 7, 8, 9], 2))
