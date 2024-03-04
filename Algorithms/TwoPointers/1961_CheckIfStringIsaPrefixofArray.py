@@ -9,6 +9,3 @@ def isPrefixString(s: str, words: List[str]) -> bool:
         if s == ''.join(words[:i]):
             return True
     return False
-
-# print(isPrefixString("iloveleetcode", ["i","love","leetcode", "apples"]))
-print(isPrefixString("a", ["aa","aaaa","banana"]))
