@@ -14,21 +14,32 @@ def maxOperations(nums: List[int], k: int) -> int:
 
 # Time: O(N logN)
 # Space: O(1)
-# def maxOperations(nums: List[int], k: int) -> int:
+def maxOperations(nums: List[int], k: int) -> int:
 
-#     nums.sort()
-#     res, l, r = 0, 0, len(nums) -1 
-#     while l < r:
-#         s = nums[l] + nums[r]
-#         if s > k:
-#             r -=1
-#         elif s < k:
-#             l += 1
-#         else:
-#             res += 1
-#             l += 1
-#             r -= 1
-#     return res
+    nums.sort()
+    res, l, r = 0, 0, len(nums) -1 
+    while l < r:
+        s = nums[l] + nums[r]
+        if s > k:
+            r -=1
+        elif s < k:
+            l += 1
+        else:
+            res += 1
+            l += 1
+            r -= 1
+    return res
 
-print(maxOperations([1,2,3,4], 5))
-print(maxOperations([3,1,3,4,3], 6))
+# Time: O(N)
+# Space: O(N)
+def maxOperations(nums: List[int], k: int) -> int:
+    result = 0
+    found = {}
+    for num in nums:
+        needed = k - num
+        if needed in found and found[needed] > 0:
+            result += 1
+            found[needed] -= 1
+        else: 
+            found[num] = found.get(nums, 0) + 1
+    return result
