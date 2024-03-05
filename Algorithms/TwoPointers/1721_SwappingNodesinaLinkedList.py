@@ -8,6 +8,8 @@ class ListNode:
         self.val = val
         self.next = next
 
+# Time: O(N)
+# Space: O(1)
 def swapNodes(head: Optional[ListNode], k: int) -> Optional[ListNode]:
     left, right = head, head 
 
