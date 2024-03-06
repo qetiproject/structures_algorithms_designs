@@ -1,5 +1,4 @@
-# https://leetcode.com/problems/reverse-words-in-a-string/?envType=study-plan-v2&envId=leetcode-75
-
+# https://leetcode.com/problems/reverse-words-in-a-string
 # Time: O(2*N), ქმნის მასივს და მისი ზომა
 # Space: O(2*N), საწყისი სტრინგის ზომა
 # def reverseWords(s: str) -> str:
