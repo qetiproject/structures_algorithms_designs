@@ -12,4 +12,3 @@ def romanToInt(s: str) -> int:
             result += data_dict[i]
     
     return result
-
