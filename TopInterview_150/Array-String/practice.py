@@ -1,9 +1,6 @@
-# https://leetcode.com/problems/product-of-array-except-self/
-
 from typing import List
 
-# Time: O(N)
-# Space: O(N)
+
 def productExceptSelf(nums: List[int]) -> List[int]:
     answer = [1] * len(nums)
 
@@ -14,7 +11,10 @@ def productExceptSelf(nums: List[int]) -> List[int]:
         left *= nums[i]
 
     for i in range(len(nums)-1, -1, -1):
+        print(nums[i])
         answer[i] = answer[i] * right
         right = right * nums[i]
 
     return answer
+
+print(productExceptSelf([1,2,3,4]))
