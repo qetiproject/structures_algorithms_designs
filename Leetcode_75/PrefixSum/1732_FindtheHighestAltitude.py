@@ -13,4 +13,11 @@ def largestAltitude(gain: List[int]) -> int:
             result = path
     return result
 
-print(largestAltitude([-5,1,5,0,-7]))
+# Time: O(N)
+# Space: O(1)
+def largestAltitude(gain: List[int]) -> int:
+    for i in range(len(gain)):
+        gain[i] += gain[ i - 1]
+
+    result = max(gain)
+    return 0 if gain < 0 else result
