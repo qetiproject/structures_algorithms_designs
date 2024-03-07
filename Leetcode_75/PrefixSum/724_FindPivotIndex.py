@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/find-pivot-index/?envType=study-plan-v2&envId=leetcode-75
+# https://leetcode.com/problems/find-pivot-index/
 
 from typing import List
 
@@ -12,5 +12,21 @@ def pivotIndex(nums: List[int]) -> int:
             return idx      
         leftSum += ele
     return -1       
-       
-print(pivotIndex([1,7,3,6,5,6]))
+
+# Time: O(3N)
+# Space: O(2N)
+def pivotIndex(nums: List[int]) -> int:
+    prefix_sum = nums.copy()
+
+    for i in range(1, len(nums)):
+        prefix_sum[i] += prefix_sum[i - 1]
+
+    suffix_sum = nums.copy()
+    for i in range(len(nums) - 2, -1, -1):
+        suffix_sum[i] += suffix_sum[i + 1]
+
+    for i in range(len(nums)):
+        if prefix_sum[i] == suffix_sum[i]:
+            return i 
+        
+    return -1
