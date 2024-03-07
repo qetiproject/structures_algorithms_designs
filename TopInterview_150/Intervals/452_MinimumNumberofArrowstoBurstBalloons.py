@@ -6,7 +6,7 @@ from typing import List
 # Space: O(N)
 def findMinArrowShots(points: List[List[int]]) -> int:
     points.sort(lambda interval: interval[1])
-    result, end = 0, points[0][1]
+    result, end = 1, points[0][1]
 
     for i in range(1, len(points)):
         if end < points[i][0]:
