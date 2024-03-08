@@ -4,28 +4,28 @@ from typing import List
 
 # Time: O(3N)
 # Space: O(3N)
-# def leftRightDifference(nums: List[int]) -> List[int]:
-#     leftSum = []
-#     rightSum = [0] * len(nums)
-#     result = [1] * len(nums)
-#     k = sum(nums)
+def leftRightDifference(nums: List[int]) -> List[int]:
+    leftSum = []
+    rightSum = [0] * len(nums)
+    result = [1] * len(nums)
+    k = sum(nums)
 
-#     for i in range(len(nums)):
-#         if i == 0:
-#             leftSum.append(0)
-#         else:
-#             leftSum.append(leftSum[i-1] + nums[i-1])
+    for i in range(len(nums)):
+        if i == 0:
+            leftSum.append(0)
+        else:
+            leftSum.append(leftSum[i-1] + nums[i-1])
     
-#     for i in range(len(nums)):
-#         if i == len(nums) - 1:
-#             rightSum.append(0)
-#         else:
-#             rightSum[i] = k - leftSum[i] - nums[i]
+    for i in range(len(nums)):
+        if i == len(nums) - 1:
+            rightSum.append(0)
+        else:
+            rightSum[i] = k - leftSum[i] - nums[i]
 
-#     for i in range(len(result)):
-#         result[i] = abs(leftSum[i] - rightSum[i])
+    for i in range(len(result)):
+        result[i] = abs(leftSum[i] - rightSum[i])
 
-#     return result
+    return result
 
 
 # Time: O(N)
