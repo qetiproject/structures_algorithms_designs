@@ -19,6 +19,7 @@ def nextGreaterElement(nums1: List[int], nums2: List[int]) -> List[int]:
 # Space: O(2N)
 def nextGreaterElement(nums1: List[int], nums2: List[int]) -> List[int]:
     nextGreaterElement = []
+    result = []
     ans_dict = {}
     for i in range(len(nums2)):
         while nextGreaterElement and nums2[nextGreaterElement[-1]] < nums2[i]:
@@ -26,12 +27,10 @@ def nextGreaterElement(nums1: List[int], nums2: List[int]) -> List[int]:
             nextGreaterElement.pop()
         nextGreaterElement.append(i)
 
-    result = []
+    
     for item in nums1:
         if item in ans_dict:
             result.append(ans_dict[item])
         else:
             result.append(-1)
     return result
-
-print(nextGreaterElement([4,1,2], [1,3,4,2]))
