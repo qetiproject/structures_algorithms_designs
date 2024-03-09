@@ -18,14 +18,12 @@ def sumOddLengthSubarrays(arr: List[int]) -> int:
     n = len(arr)
     result = 0
 
-    # Iterate through each element in the array
     for i in range(n):
         left_odd = (i + 1) // 2
         right_odd = (n - i) // 2
         left_even = i // 2 + 1
         right_even = (n - i - 1) // 2 + 1
 
-        # Calculate the number of subarrays with each element as the center
         result += arr[i] * (left_odd * right_odd + left_even * right_even)
 
     return result
