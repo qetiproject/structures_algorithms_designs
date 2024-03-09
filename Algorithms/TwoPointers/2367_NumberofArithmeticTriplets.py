@@ -1,7 +1,6 @@
 # https://leetcode.com/problems/number-of-arithmetic-triplets/
 
 
-from collections import defaultdict
 from typing import List
 
 # Time: O(N ^ 2)
