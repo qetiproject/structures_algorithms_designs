@@ -20,7 +20,7 @@ class MyStack:
         return len(self.storage) == 0
     
 
-class MyStack:
+class MyStackUsinQueue:
     def __init__(self):
         self.storage = Deque()
 
