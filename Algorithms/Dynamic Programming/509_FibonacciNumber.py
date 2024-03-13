@@ -42,7 +42,7 @@ def fib(n: int) -> int:
 # Time - O(N), ბევრჯერ თუ გამოვიძახებთ მაინც O(N)
 memo = [0, 1]
 def fib(n: int) -> int:
-    for  _ in range(len(memo),n - 1):
+    for  _ in range(len(memo),n + 1):
         new_number = memo[-1] + memo[-2]
         memo.append(new_number)
     return memo[n]
