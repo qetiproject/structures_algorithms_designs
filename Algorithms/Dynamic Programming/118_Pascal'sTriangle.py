@@ -18,4 +18,3 @@ def generate(numRows: int) -> List[List[int]]:
         new_row.append(1)
         result.append(new_row)
     return result
-print(generate(5))
